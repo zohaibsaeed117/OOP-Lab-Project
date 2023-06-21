@@ -41,10 +41,10 @@ public:
                 string checkName = "";
                 string checkPassword = "";
                 File >> checkName >> checkPassword;
-                if (checkName == userName || checkPassword == password)
+                if (checkName == userName)
                 {
 
-                    cout << "Warning! User Name or Password is already taken!" << endl;
+                    cout << "Warning! User Name is already taken!" << endl;
                     cout << "\n\n\n\t Enter Details Again:" << endl;
                     system("Pause");
                     flag = false;
