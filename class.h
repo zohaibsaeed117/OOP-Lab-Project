@@ -12,10 +12,7 @@ protected:
 
 public:
     virtual void Register() = 0;
-    virtual void login()
-    {
-        cout<<"In person registration"<<endl;
-    }
+    virtual void login()=0;
 };
 class Librarian : public Person
 {
@@ -27,6 +24,6 @@ class Student : public Person
 {
 public:
     void Register();
-    // void login();
+    void login();
 };
 #endif

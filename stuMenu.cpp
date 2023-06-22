@@ -31,7 +31,7 @@ void stuMenu(Person *person)
     }
     else if(choice==2)
     {
-        // person->login();
+        person->login();
     }
     else if(choice==4)
     {
