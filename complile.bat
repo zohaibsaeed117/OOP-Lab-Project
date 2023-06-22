@@ -1,2 +1,2 @@
-g++ libMenu.cpp main.cpp
+g++ libMenu.cpp main.cpp RegisterLib.cpp
 echo "Compiled Successfully"
