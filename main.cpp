@@ -28,7 +28,8 @@ int menu()
 
     else if (choice == 2)
     {
-         // Move user to stumenu Menu
+        ptr=new Student; // Move user to stumenu Menu
+        stuMenu(ptr);
     }
     else
     {

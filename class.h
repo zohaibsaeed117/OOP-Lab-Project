@@ -22,4 +22,9 @@ class Librarian : public Person
 public:
     void Register();
 };
+class Student : public Person
+{
+    public:
+    void Register();
+};
 #endif

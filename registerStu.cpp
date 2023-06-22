@@ -1,7 +1,7 @@
 #include <iostream>
 #include "class.h"
 using namespace std;
-void Librarian::Register()
+void Student::Register()
 {
     bool flag = true;
     cout << "\n\n\n\t To Register Enter given details:" << endl;
@@ -16,7 +16,7 @@ void Librarian::Register()
 
         // These statments are to check whether the user name is already taken or not
         fstream File;
-        File.open("Librarian.txt", ios::in);
+        File.open("Student.txt", ios::in);
         while (!File.eof())
         {
             string checkName = "";
@@ -39,13 +39,11 @@ void Librarian::Register()
 
     } while (flag == false);
     fstream File;
-    File.open("Librarian.txt", ios::app);
+    File.open("Student.txt", ios::app);
     File << userName << " " << password << endl;
-    cout << "User "
+    cout << "\n\n\n\tUser "
          << "\"" << userName << "\""
          << " registerd Successfully" << endl;
     File.close();
-    cout << endl
-         << endl;
     system("Pause");
 }

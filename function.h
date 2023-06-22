@@ -6,4 +6,6 @@ using namespace std;
 
 void libMenu(Person *person);
 
+void stuMenu(Person *person);
+
 #endif
