@@ -1,4 +1,5 @@
 #include <iostream>
+#include <unistd.h>
 #include "class.h"
 using namespace std;
 void Student::Register()
@@ -45,5 +46,8 @@ void Student::Register()
          << "\"" << userName << "\""
          << " registerd Successfully" << endl;
     File.close();
-    system("Pause");
+    cout<<"Redirecting to Login Page..." << endl;
+    sleep(3);
+    system("cls");
+    this->login();
 }

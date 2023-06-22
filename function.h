@@ -8,4 +8,5 @@ void libMenu(Person *person);
 
 void stuMenu(Person *person);
 
+int menu();
 #endif

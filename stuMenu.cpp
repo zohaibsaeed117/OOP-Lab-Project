@@ -25,18 +25,24 @@ void stuMenu(Person *person)
     cout << "\n\n\n\t Enter your choice:--> ";
     cin >> choice;
     system("cls");
-    if(choice==1)
+    if (choice == 1)
     {
+        system("cls");
         person->Register();
     }
-    else if(choice==2)
+    else if (choice == 2)
     {
+        system("cls");
         person->login();
     }
-    else if(choice==4)
+    else if (choice == 3)
     {
-        cout<<"\n\n\n\tThankyou For Using our Program!"<<endl;
+        system("cls");
+        menu();
+    }
+    else
+    {
+        cout << "\n\n\n\tThankyou For Using our Program!" << endl;
         system("Pause");
     }
-    
 }

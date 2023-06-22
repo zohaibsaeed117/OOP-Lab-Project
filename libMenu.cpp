@@ -1,4 +1,5 @@
 #include <iostream>
+#include <stdlib.h>
 #include "class.h"
 #include "function.h"
 using namespace std;
@@ -27,13 +28,20 @@ void libMenu(Person *person)
     system("cls");
     if(choice==1)
     {
+        system("cls");
         person->Register();
     }
-    if(choice==2)
+    else if(choice==2)
     {
+        system("cls");
         person->login();
     }
-    else if(choice==4)
+    else if(choice==3)
+    {
+        system("cls");
+        menu();
+    }
+    else
     {
         cout<<"\n\n\n\tThankyou For Using our Program!"<<endl;
         system("Pause");

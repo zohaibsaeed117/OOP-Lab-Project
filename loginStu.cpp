@@ -8,6 +8,7 @@ void Student::login()
     bool flag = false;
     do
     {
+        cout << "\n\n\n\tLogin Page" << endl;
         cout << "\n\n\n\tEnter UserName and Password" << endl;
 
         cout << "\n\n\n\tEnter UserName----->\t";
@@ -25,14 +26,13 @@ void Student::login()
                 cout << "\n\n\n\t You are Logged In!" << endl;
                 cout << "\n\n\n\tRedirecting to the Home Page..." << endl;
                 sleep(3);
-                flag=true;
+                flag = true;
                 break;
             }
         }
-        if(!flag)
+        if (!flag)
         {
-            cout<<"\n\n\n\tWrong Credentials!"<<endl;
+            cout << "\n\n\n\tWrong Credentials!" << endl;
         }
     } while (!flag);
-    
 }

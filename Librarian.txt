@@ -4,3 +4,6 @@ Zexta 12345
 Zaibi 12345
 majo 123456
 ZextaPsycho 1234
+Majo 1234
+faiq 1122
+abc 123
