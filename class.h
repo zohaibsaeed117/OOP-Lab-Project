@@ -17,6 +17,10 @@ public:
     {
         cout<<"this is my home page"<<endl;
     }
+    virtual void searchBook()
+    {
+        cout<<"this is my search page"<<endl;
+    }
 };
 class Librarian : public Person
 {
@@ -24,6 +28,7 @@ public:
     void Register();
     void login();
     void homePage();
+    void searchBook();
 };
 class Student : public Person
 {

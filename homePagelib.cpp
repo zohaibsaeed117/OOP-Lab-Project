@@ -1,4 +1,5 @@
 #include <iostream>
+#include<cstring>
 #include "class.h"
 #include "function.h"
 using namespace std;
@@ -17,7 +18,7 @@ void Librarian::homePage()
     cin>>choice;
     if(choice==1)
     {
-        //SearchBook
+        this->searchBook();
     }
     else if(choice==2)
     {
