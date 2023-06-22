@@ -60,8 +60,9 @@ public:
         fstream File;
         File.open("Librarian.txt",ios::app);
         File << userName << " " << password << endl;
+        cout<<"User "<<"\""<<userName<<"\""<<" registerd Successfully"<<endl;
         File.close();
-
+        cout<<endl<<endl;
         system("Pause");
     }
 };
