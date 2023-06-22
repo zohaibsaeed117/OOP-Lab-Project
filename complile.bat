@@ -1,2 +1,2 @@
-g++ libMenu.cpp main.cpp RegisterLib.cpp registerStu.cpp stuMenu.cpp
+g++ libMenu.cpp main.cpp RegisterLib.cpp registerStu.cpp stuMenu.cpp loginLib.cpp
 echo "Compiled Successfully"

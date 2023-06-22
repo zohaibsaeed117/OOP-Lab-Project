@@ -29,6 +29,10 @@ void stuMenu(Person *person)
     {
         person->Register();
     }
+    else if(choice==2)
+    {
+        // person->login();
+    }
     else if(choice==4)
     {
         cout<<"\n\n\n\tThankyou For Using our Program!"<<endl;

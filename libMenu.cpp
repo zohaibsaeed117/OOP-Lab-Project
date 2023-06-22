@@ -13,7 +13,7 @@ void libMenu(Person *person)
     cout << "\n\n\t Welcome" << endl;
     cout << "<----------------------->" << endl;
 
-    cout << "\n\n\n\t  LIBRARIAN INTERFACE " << endl;
+    cout << "\n\n\n\t  LIBRARIAN LOGIN INTERFERCE " << endl;
 
     cout << "\n\n\n\t What do you want???" << endl;
 
@@ -28,6 +28,10 @@ void libMenu(Person *person)
     if(choice==1)
     {
         person->Register();
+    }
+    if(choice==2)
+    {
+        person->login();
     }
     else if(choice==4)
     {

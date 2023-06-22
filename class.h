@@ -11,20 +11,22 @@ protected:
     string password;
 
 public:
-    virtual void Register()
+    virtual void Register() = 0;
+    virtual void login()
     {
-        this->userName = userName;
-        this->password = password;
+        cout<<"In person registration"<<endl;
     }
 };
 class Librarian : public Person
 {
 public:
     void Register();
+    void login();
 };
 class Student : public Person
 {
-    public:
+public:
     void Register();
+    // void login();
 };
 #endif
