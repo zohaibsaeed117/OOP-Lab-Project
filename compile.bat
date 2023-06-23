@@ -1,2 +1,2 @@
-g++ menu.cpp libMenu.cpp main.cpp RegisterLib.cpp registerStu.cpp stuMenu.cpp loginLib.cpp loginStu.cpp homePagelib.cpp searchBook.cpp addBook.cpp homepagestu.cpp borrowBook.cpp 
+g++ menu.cpp libMenu.cpp main.cpp RegisterLib.cpp registerStu.cpp stuMenu.cpp loginLib.cpp loginStu.cpp homePagelib.cpp searchBook.cpp addBook.cpp homepagestu.cpp borrowBook.cpp checkstatusStu.cpp
 echo "Compiled Successfully"

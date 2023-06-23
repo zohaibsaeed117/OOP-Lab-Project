@@ -26,7 +26,7 @@ void Student::homePage()
     }
     else if(choice==3)
     {
-        //Check status
+        this->checkStatus();//Check status
     }
     else if(choice==4)
     {
