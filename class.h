@@ -29,6 +29,7 @@ public:
     void login();
     void homePage();
     void searchBook();
+    void addBook();
 };
 class Student : public Person
 {

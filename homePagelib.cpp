@@ -10,7 +10,7 @@ void Librarian::homePage()
     cout<<"\n\n\n\t1--->Search for a book"<<endl;
     cout<<"\n\n\n\t2--->Add a book"<<endl;
     cout<<"\n\n\n\t3--->Issue book to Student"<<endl;
-    cout<<"\n\n\n\t4--->Back to Main Menu"<<endl;
+    cout<<"\n\n\n\t4--->Logout of your account"<<endl;
     cout<<"\n\n\n\t5--->Exit"<<endl;
 
     int choice = 0;
@@ -22,7 +22,7 @@ void Librarian::homePage()
     }
     else if(choice==2)
     {
-        //Add a book
+        this->addBook();//Add a book
     }
     else if(choice==3)
     {
@@ -30,7 +30,14 @@ void Librarian::homePage()
     }
     else if(choice==4)
     {
-       menu(); //Main Menu
+        system("cls");
+        char ans;
+        cout<<"\n\n\n\tAre you sure you want to logout?(y/n)";
+        cin>>ans;
+        if(ans=='y')
+            menu(); //Main Menu
+        else
+        this->homePage();
     }
     else if(choice==5)
     {
