@@ -36,7 +36,7 @@ void Student::borrowBook()
             cout << "\n\n\n\tBook"
                  << "\"" << bookName << "\" is on pending status till approved by a librarian." << endl;
             fstream book;
-            book.open("status.txt", ios::app);
+            book.open(userName+".txt", ios::app);
             book << userName << "\t"
                  << "pending"
                  << "\t" << bookName << endl;

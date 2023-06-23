@@ -7,9 +7,8 @@ using namespace std;
 void Student::checkStatus()
 {
     system("cls");
-    cout << "check" << endl;
     fstream status;
-    status.open("status.txt", ios::in);
+    status.open(userName+".txt", ios::in);
     int i = 0;
     while (!status.eof())
     {
@@ -17,13 +16,10 @@ void Student::checkStatus()
         status >> name;
         status >> checkStatus;
         getline(status, book);
-        if (userName == name)
-        {
-            i++;
-            cout << i << "."
-                 << "\"" << book << "\""
-                 << "\t" << checkStatus << endl;
-        }
+        i++;
+        cout << i << "."
+             << "\"" << book << "\""
+             << "\t" << checkStatus << endl;
     }
     status.close();
     system("Pause");
