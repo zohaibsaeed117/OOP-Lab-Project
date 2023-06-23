@@ -2,8 +2,6 @@
 #include <fstream>
 #include <string>
 #include <unistd.h>
-#include <algorithm>
-#include <cctype>
 #include "class.h"
 using namespace std;
 void Student::checkStatus()

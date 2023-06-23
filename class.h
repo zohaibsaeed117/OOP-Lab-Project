@@ -23,6 +23,7 @@ public:
     void login();
     void homePage();
     void addBook();
+    void issueBook();
 };
 class Student : public Person
 {
