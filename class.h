@@ -13,14 +13,8 @@ protected:
 public:
     virtual void Register() = 0;
     virtual void login()=0;
-    virtual void homePage()
-    {
-        cout<<"this is my home page"<<endl;
-    }
-    virtual void searchBook()
-    {
-        cout<<"this is my search page"<<endl;
-    }
+    virtual void homePage()=0;
+    void searchBook();
 };
 class Librarian : public Person
 {
@@ -28,7 +22,6 @@ public:
     void Register();
     void login();
     void homePage();
-    void searchBook();
     void addBook();
 };
 class Student : public Person
@@ -36,6 +29,6 @@ class Student : public Person
 public:
     void Register();
     void login();
-    // void homePage();
+    void homePage();
 };
 #endif

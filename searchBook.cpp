@@ -5,7 +5,7 @@
 #include "class.h"
 #include "function.h"
 using namespace std;
-void Librarian:: searchBook()
+void Person:: searchBook()
 {
     system("cls");
     string bookName;

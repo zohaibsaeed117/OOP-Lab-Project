@@ -23,9 +23,6 @@ void Student::login()
             File >> checkName >> checkPassword;
             if (checkName == userName && checkPassword == password)
             {
-                cout << "\n\n\n\t You are Logged In!" << endl;
-                cout << "\n\n\n\tRedirecting to the Home Page..." << endl;
-                sleep(3);
                 flag = true;
                 break;
             }
@@ -35,4 +32,11 @@ void Student::login()
             cout << "\n\n\n\tWrong Credentials!" << endl;
         }
     } while (!flag);
+    if (flag)
+    {
+        cout << "\n\n\n\t You are Logged In!" << endl;
+        cout << "\n\n\n\tRedirecting to the Home Page..." << endl;
+        sleep(3);
+        this->homePage();
+    }
 }
