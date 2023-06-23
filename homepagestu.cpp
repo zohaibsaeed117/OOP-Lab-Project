@@ -22,11 +22,11 @@ void Student::homePage()
     }
     else if(choice==2)
     {
-        //Add a book
+        this->borrowBook();//Borrow a book
     }
     else if(choice==3)
     {
-        //Issue a book
+        //Check status
     }
     else if(choice==4)
     {

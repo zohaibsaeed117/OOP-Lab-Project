@@ -30,5 +30,6 @@ public:
     void Register();
     void login();
     void homePage();
+    void borrowBook();
 };
 #endif
