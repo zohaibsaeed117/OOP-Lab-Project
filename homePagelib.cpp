@@ -26,7 +26,7 @@ void Librarian::homePage()
     }
     else if(choice==3)
     {
-        //Issue a book
+        this->issueBook();//Issue a book
     }
     else if(choice==4)
     {

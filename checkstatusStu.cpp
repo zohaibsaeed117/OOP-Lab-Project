@@ -8,12 +8,11 @@ void Student::checkStatus()
 {
     system("cls");
     fstream status;
-    status.open(userName+".txt", ios::in);
+    status.open(userName + ".txt", ios::in);
     int i = 0;
     while (!status.eof())
     {
-        string name, checkStatus, book;
-        status >> name;
+        string checkStatus, book;
         status >> checkStatus;
         getline(status, book);
         i++;

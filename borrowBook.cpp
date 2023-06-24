@@ -1,6 +1,6 @@
 #include <iostream>
 #include <fstream>
-#include<unistd.h> 
+#include <unistd.h>
 #include "class.h"
 using namespace std;
 void Student::borrowBook()
@@ -36,16 +36,14 @@ void Student::borrowBook()
             cout << "\n\n\n\tBook"
                  << "\"" << bookName << "\" is on pending status till approved by a librarian." << endl;
             fstream book;
-            book.open(userName+".txt", ios::app);
-            book << userName << "\t"
-                 << "pending"
+            book.open(userName + ".txt", ios::app);
+            book << "pending"
                  << "\t" << bookName << endl;
         }
-        cout<<"Do you want to borrow another book?(y/n)"<<endl;
-        cin>>choice;
+        cout << "Do you want to borrow another book?(y/n)" << endl;
+        cin >> choice;
     } while (choice == 'y');
-    cout<<"Redirecting to the homepage..."<<endl;
+    cout << "Redirecting to the homepage..." << endl;
     sleep(3);
     this->homePage();
-    
 }
