@@ -46,6 +46,9 @@ void Student::Register()
          << "\"" << userName << "\""
          << " registerd Successfully" << endl;
     File.close();
+    fstream stu;
+    stu.open(userName+".txt",ios::app);
+    stu.close();
     cout<<"Redirecting to Login Page..." << endl;
     sleep(3);
     system("cls");
