@@ -1,3 +1,2 @@
 approved thomas calculus
-approved howard dental 
-pending harry potter
+pending	howard dental

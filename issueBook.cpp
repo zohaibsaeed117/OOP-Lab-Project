@@ -11,7 +11,7 @@ void Librarian::issueBook()
     {
         string studentName;
         cout << "\n\n\n\tEnter the name of the Student you want to issue a book\t";
-        cin >> studentName;
+        getline(cin,studentName);
         ifstream student(studentName + ".txt");
         ofstream tempFile("temp.txt");
         if (!student)
