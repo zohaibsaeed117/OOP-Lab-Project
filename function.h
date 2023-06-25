@@ -10,5 +10,6 @@ void stuMenu(Person *person);
 
 int menu();
 
-int search(string,string);
+int search(string, string);
+
 #endif

@@ -2,6 +2,7 @@
 #include <fstream>
 #include <unistd.h>
 #include "class.h"
+#include "function.h"
 using namespace std;
 void Student::borrowBook()
 {
