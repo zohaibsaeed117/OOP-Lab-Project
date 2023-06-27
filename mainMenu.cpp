@@ -1,11 +1,10 @@
-#include<iostream>
-#include"stdlib.h"
-#include "function.h"
+#include <iostream>
+#include "class.h"
+#include "stdlib.h"
 using namespace std;
-int menu()
+int Library::mainMenu()
 {
     system("cls");
-    Person *ptr;
     cout << "<----------------------->" << endl;
     cout << "\n\n\t Welcome" << endl;
     cout << "<----------------------->" << endl;
@@ -22,18 +21,18 @@ int menu()
     system("cls");
     if (choice == 1)
     {
-        ptr=new Librarian; // Move user to Librarian Menu
-        libMenu(ptr);
+        ptr = new Librarian; // Move user to Librarian Menu
+        ptr->menu();
     }
 
     else if (choice == 2)
     {
-        ptr=new Student; // Move user to stumenu Menu
-        stuMenu(ptr);
+        ptr = new Student; // Move user to stumenu Menu
+        ptr->menu();
     }
     else
     {
-        cout<<"\n\n\n\tThankyou for using our Library Managment System!"<<endl;
+        cout << "\n\n\n\tThankyou for using our Library Managment System!" << endl;
         system("Pause");
         return 1; // Exit Menu
     }
