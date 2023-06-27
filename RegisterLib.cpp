@@ -16,6 +16,7 @@ void Librarian::Register()
         cin >> this->password;
 
         // These statments are to check whether the user name is already taken or not
+         
         fstream File;
         File.open("Librarian.txt", ios::in);
         while (!File.eof())
