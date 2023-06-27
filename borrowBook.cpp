@@ -42,28 +42,66 @@ void Student::borrowBook()
             }
         }
         book.close();
+        fstream user;
         if (flag == 1)
         {
-            cout << "\n\n\n\tBook"
-                 << "\"" << bookName << "\" is on pending status till approved by a librarian." << endl;
-            book.open(userName + ".txt", ios::app);
-            book << "pending"
-                 << "\t" << bookName << endl;
-            book.close();
+            bool isFound = false;
+            user.open(userName + ".txt", ios::in);
+            string tempString;
+            while (getline(user, tempString))
+            {
+                if (search(tempString, bookName) > -1)
+                {
+                    isFound = true;
+                }
+            }
+            user.close();
+            if (!isFound)
+            {
+                user.open(userName + ".txt", ios::app);
+                cout << "\n\n\n\tBook"
+                     << "\"" << checkBook << "\" is on pending status till approved by a librarian." << endl;
+                user << "pending"
+                     << "\t" << checkBook << endl;
+                user.close();
+            }
+            else
+            {
+                cout << "\n\n\n\tBook is already in the list" << endl;
+            }
         }
-        if (flag == 2)
+        else if (flag == 2)
         {
             char check;
             cout << "\n\n\n\tDid you mean \"" << checkBook << "\"?(y/n)" << endl;
             cin >> check;
             if (check == 'y')
             {
-                cout << "\n\n\n\tBook"
-                     << "\"" << checkBook << "\" is on pending status till approved by a librarian." << endl;
-                book.open(userName + ".txt", ios::app);
-                book << "pending"
-                     << "\t" << checkBook << endl;
-                book.close();
+                user.open(userName + ".txt", ios::in);
+                bool isFound = false;
+                string tempString;
+                while (getline(user, tempString))
+                {
+                    if (search(tempString, bookName) > -1)
+                    {
+                        isFound = true;
+                    }
+                }
+                user.close();
+                if (!isFound)
+                {
+                    user.open(userName + ".txt", ios::app);
+                    cout << "\n\n\n\tBook"
+                         << "\"" << checkBook << "\" is on pending status till approved by a librarian." << endl;
+                    user << "pending"
+                         << "\t" << checkBook << endl;
+                    user.close();
+                }
+                else
+                {
+                    cout << "\n\n\n\tBook is already in the list" << endl;
+                }
+                user.close();
             }
             else
             {
