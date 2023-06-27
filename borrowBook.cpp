@@ -10,47 +10,69 @@ void Student::borrowBook()
     do
     {
         system("cls");
-        fstream tempBook;
-        tempBook.open("book.txt", ios::in);
+        fstream book;
+        book.open("book.txt", ios::in);
         int i = 0;
         cout << "\t---------------------------Books Name------------------------" << endl;
         string temp;
-        while (getline(tempBook, temp))
+        while (getline(book, temp))
         {
             i++;
             cout << i << ". " << temp << endl;
         }
-        tempBook.close();
-        fstream book;
+        book.close();
         book.open("book.txt", ios::in);
         string bookName;
         cout << "\n\n\n\tWhat book do you want to borrow?\t";
         cin.ignore();
         getline(cin, bookName);
-        bool flag = false;
-        while (!book.eof())
+        int flag = 0;
+        string checkBook;
+        while (getline(book, checkBook))
         {
-            string checkBook;
-            getline(book, checkBook);
             if (bookName == checkBook)
             {
-                flag = true;
+                flag = 1;
+                break;
+            }
+            else if (search(checkBook, bookName) > -1)
+            {
+                flag = 2;
                 break;
             }
         }
         book.close();
-        if (!flag)
-        {
-            cout << "\n\n\n\tBook is not present in the library!" << endl;
-        }
-        else
+        if (flag == 1)
         {
             cout << "\n\n\n\tBook"
                  << "\"" << bookName << "\" is on pending status till approved by a librarian." << endl;
-            fstream book;
             book.open(userName + ".txt", ios::app);
             book << "pending"
                  << "\t" << bookName << endl;
+            book.close();
+        }
+        if (flag == 2)
+        {
+            char check;
+            cout << "\n\n\n\tDid you mean \"" << checkBook << "\"?(y/n)" << endl;
+            cin >> check;
+            if (check == 'y')
+            {
+                cout << "\n\n\n\tBook"
+                     << "\"" << checkBook << "\" is on pending status till approved by a librarian." << endl;
+                book.open(userName + ".txt", ios::app);
+                book << "pending"
+                     << "\t" << checkBook << endl;
+                book.close();
+            }
+            else
+            {
+                cout << "\n\n\n\tBook is not present in the library!" << endl;
+            }
+        }
+        else
+        {
+            cout << "\n\n\n\tBook is not present in the library!" << endl;
         }
         cout << "Do you want to borrow another book?(y/n)" << endl;
         cin >> choice;
