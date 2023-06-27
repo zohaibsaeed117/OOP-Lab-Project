@@ -1,5 +1,7 @@
 #include <iostream>
 #include <fstream>
+#include <string>
+#include <sstream>
 #include <unistd.h>
 #include "function.h"
 #include "class.h"
@@ -13,44 +15,38 @@ void Librarian::deleteBook()
         bool isFound = false;
         string bookName;
         string temp;
-        fstream tempBook("book.txt");
-        fstream tempFile("temp.txt");
+        ifstream book("book.txt");
+        ofstream file("temp.txt");
         cout << "\n\n\n\tEnter the name of the book you want to delete--->";
         cin.ignore();
         getline(cin, bookName);
-        while (getline(tempBook, temp))
+        while (getline(book, temp))
         {
-            tempFile << temp << endl;
-            if (bookName == temp)
+            if (temp != bookName)
+            {
+                file<< temp <<endl;
+            }
+            else
             {
                 isFound = true;
             }
         }
-        tempBook.close();
-        tempFile.close();
-        fstream book("book.txt");
-        fstream file("temp.txt");
-        if (isFound == true)
+        book.close();
+        file.close();
+        remove("book.txt");
+        rename("temp.txt", "book.txt");
+        if (isFound)
         {
-            while (getline(file, temp))
-            {
-                if (bookName == temp)
-                {
-                    cout << "\n\n\n\tThe book "
-                         << "\"" << bookName << "\""
-                         << " has been deleted succesfully." << endl;
-                    continue;
-                }
-                book << temp << endl;
-            }
+            cout << "\n\n\n\tBook "
+                 << "\"" << bookName << "\""
+                 << " has been deleted successfully." << endl;
         }
         else
         {
-            cout << "\"" << bookName << "\""
-                 << "is not found in the list." << endl;
+            cout << "\n\n\n\tBook "
+                 << "\"" << bookName << "\""
+                 << " is not found in the list" << endl;
         }
-        book.close();
-        file.close();
         cout << "\n\n\n\tDo you want to delete another book?(y/n)";
         cin >> choice;
     } while (choice == 'y');

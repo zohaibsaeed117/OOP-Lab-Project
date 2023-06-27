@@ -14,11 +14,10 @@ void Student::borrowBook()
         tempBook.open("book.txt", ios::in);
         int i = 0;
         cout << "\t---------------------------Books Name------------------------" << endl;
-        while (!tempBook.eof())
+        string temp;
+        while (getline(tempBook, temp))
         {
             i++;
-            string temp;
-            getline(tempBook, temp);
             cout << i << ". " << temp << endl;
         }
         tempBook.close();
