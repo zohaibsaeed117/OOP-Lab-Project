@@ -37,11 +37,12 @@ void Student::menu()
     else if (choice == 3)
     {
         system("cls");
-        menu();
+        
     }
     else
     {
         cout << "\n\n\n\tThankyou For Using our Program!" << endl;
         system("Pause");
+        system("exit");
     }
 }

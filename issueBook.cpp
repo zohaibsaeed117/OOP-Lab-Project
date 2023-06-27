@@ -11,8 +11,10 @@ void Librarian::issueBook()
     {
         string studentName;
         cout << "\n\n\n\tEnter the name of the Student you want to issue a book\t";
+        cin.ignore();
         getline(cin, studentName);
-        ifstream student(studentName + ".txt");
+        string fileName=studentName+".txt";
+        ifstream student(fileName);
         ofstream tempFile("temp.txt");
         if (!student)
         {
@@ -25,38 +27,29 @@ void Librarian::issueBook()
             string bookName;
             cout << "\n\n\n\tEnter the name of the book you want to issue to student"
                  << " \"" << studentName << "\":\t";
-            cin.ignore();
             getline(cin, bookName);
 
             while (getline(student, temp))
             {
-                tempFile << temp << endl;
                 if (search(temp, bookName) > -1)
                 {
+                    temp.replace(0,8,"approved ");
                     flag = true;
                 }
+                tempFile << temp << endl;
             }
             student.close();
             tempFile.close();
-            if (!flag)
+            remove(fileName.c_str());
+            rename("temp.txt",fileName.c_str());
+            if (flag)
             {
-                cout << "Book not found in the student directory to be approved" << endl;
+                cout << "\n\n\n\tBook"
+                     << "\"" << bookName << "\" for Student \"" << studentName << "\" is approved\n";
             }
             else
             {
-                ofstream student(studentName + ".txt");
-                ifstream tempFile("temp.txt");
-                string line;
-                while (getline(tempFile, line))
-                {
-                    if (search(line, bookName) > -1)
-                    {
-                        line.replace(0, 8, "approved ");
-                    }
-                    student << line << endl;
-                }
-                cout << "\n\n\n\tBook"
-                     << "\"" << bookName << "\" for Student \"" << studentName << "\" is approved\n";
+                cout << "Book not found in the student directory to be approved" << endl;
             }
         }
         cout << "\n\n\n\tDo you want to issue book to another student?(y/n)";

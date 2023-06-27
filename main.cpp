@@ -4,6 +4,9 @@ using namespace std;
 int main()
 {
     Library library;
-    library.mainMenu();
+    while(library.mainMenu()==1)
+    {
+        
+    }
     return 0; // Exit Menu
 }

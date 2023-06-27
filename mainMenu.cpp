@@ -23,19 +23,20 @@ int Library::mainMenu()
     {
         ptr = new Librarian; // Move user to Librarian Menu
         ptr->menu();
+        return 1;
     }
 
     else if (choice == 2)
     {
         ptr = new Student; // Move user to stumenu Menu
         ptr->menu();
+        return 1;
     }
     else
     {
         cout << "\n\n\n\tThankyou for using our Library Managment System!" << endl;
         system("Pause");
-        return 1; // Exit Menu
+        return 0; // Exit Menu
     }
     delete ptr;
-    return 0;
 }

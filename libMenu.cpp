@@ -34,11 +34,11 @@ void Librarian::menu()
     {
         system("cls");
         this->login();
+        
     }
     else if(choice==3)
     {
         system("cls");
-        menu();
     }
     else
     {
