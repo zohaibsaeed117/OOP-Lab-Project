@@ -1,10 +1,9 @@
 #include <iostream>
 #include <stdlib.h>
 #include "class.h"
-#include "function.h"
 using namespace std;
 
-void libMenu(Person *person)
+void Librarian::menu()
 {
     system("cls");
 
@@ -29,12 +28,12 @@ void libMenu(Person *person)
     if(choice==1)
     {
         system("cls");
-        person->Register();
+        this->Register();
     }
     else if(choice==2)
     {
         system("cls");
-        person->login();
+        this->login();
     }
     else if(choice==3)
     {

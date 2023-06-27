@@ -2,6 +2,7 @@
 #include <fstream>
 #include <unistd.h>
 #include "class.h"
+#include "function.h"
 using namespace std;
 void Student::borrowBook()
 {
@@ -9,13 +10,24 @@ void Student::borrowBook()
     do
     {
         system("cls");
+        fstream tempBook;
+        tempBook.open("book.txt", ios::in);
+        int i = 0;
+        cout << "\t---------------------------Books Name------------------------" << endl;
+        string temp;
+        while (getline(tempBook, temp))
+        {
+            i++;
+            cout << i << ". " << temp << endl;
+        }
+        tempBook.close();
+        fstream book;
+        book.open("book.txt", ios::in);
         string bookName;
         cout << "\n\n\n\tWhat book do you want to borrow?\t";
         cin.ignore();
         getline(cin, bookName);
         bool flag = false;
-        fstream book;
-        book.open("book.txt", ios::in);
         while (!book.eof())
         {
             string checkBook;

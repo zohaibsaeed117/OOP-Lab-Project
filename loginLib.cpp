@@ -2,6 +2,7 @@
 #include <fstream>
 #include <stdlib.h>
 #include <unistd.h>
+#include "function.h"
 #include "class.h"
 using namespace std;
 void Librarian::login()
@@ -40,6 +41,13 @@ void Librarian::login()
         else
         {
             cout << "\n\n\n\tWrong Credentials!" << endl;
+            char ans;
+            cout<<"\n\n\n\tDo you want to try again?(y/n)";
+            cin>>ans;
+            if(ans!='y')
+            {
+                menu();
+            }
         }
     } while (!flag);
 }

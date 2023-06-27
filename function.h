@@ -4,11 +4,6 @@
 #include <iostream>
 using namespace std;
 
-void libMenu(Person *person);
+int search(string, string);
 
-void stuMenu(Person *person);
-
-int menu();
-
-int search(string,string);
 #endif

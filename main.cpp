@@ -1,8 +1,9 @@
 #include <iostream>
-#include "function.h"
+#include "class.h"
 using namespace std;
 int main()
 {
-    menu();
+    Library library;
+    library.mainMenu();
     return 0; // Exit Menu
 }

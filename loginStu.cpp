@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <unistd.h>
+#include "function.h"
 #include "class.h"
 using namespace std;
 void Student::login()
@@ -30,6 +31,13 @@ void Student::login()
         if (!flag)
         {
             cout << "\n\n\n\tWrong Credentials!" << endl;
+            char ans;
+            cout<<"\n\n\n\tDo you want to try again or not?(y/n)";
+            cin>>ans;
+            if(ans!='y')
+            {
+                menu();
+            }
         }
     } while (!flag);
     if (flag)
