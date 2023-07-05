@@ -36,6 +36,7 @@ public:
     void login();
     void homePage();
     void borrowBook();
+    void returnBook();
     void checkStatus();
 };
 class Library
