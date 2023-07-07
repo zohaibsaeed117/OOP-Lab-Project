@@ -47,8 +47,8 @@ void Librarian::Register()
          << "\"" << userName << "\""
          << " registerd Successfully" << endl;
     File.close();
-    cout<<"Redirecting to Login Page" << endl;
+    cout<<"Redirecting to Librarian Menu" << endl;
     sleep(3);
     system("cls");
-    this->login();
+    this->menu();
 }

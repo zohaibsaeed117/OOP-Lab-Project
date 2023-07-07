@@ -12,7 +12,7 @@ void Person::searchBook()
     {
         system("cls");
         string bookName;
-        cout << "\n\n\n\tWhat book do you want to search?\t";
+        cout << "\n\n\n\tWhat book do you want to search?(y/n)\t";
         cin.ignore();
         getline(cin, bookName);
         int flag = 0;
@@ -42,7 +42,7 @@ void Person::searchBook()
         else if (flag == 2)
         {
             char check;
-            cout << "Did you mean \"" << checkBook << "\" ?(y/n)" << endl;
+            cout << "Did you mean \"" << checkBook << "\" ?(y/n)";
             cin >> check;
             if (check == 'y')
             {
@@ -59,7 +59,7 @@ void Person::searchBook()
         {
             cout << "\n\n\n\tBook Not Found!" << endl;
         }
-        cout << "\n\n\n\tDo you want to find another book?";
+        cout << "\n\n\n\tDo you want to find another book?(y/n)";
         cin >> choice;
     } while (choice == 'y');
 }
