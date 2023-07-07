@@ -29,7 +29,6 @@ void Librarian::Register()
 
                 cout << "Warning! User Name is already taken!" << endl;
                 cout << "\n\n\n\t Enter Details Again:" << endl;
-                system("Pause");
                 flag = false;
                 break;
             }

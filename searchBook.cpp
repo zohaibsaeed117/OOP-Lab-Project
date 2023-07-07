@@ -62,4 +62,5 @@ void Person::searchBook()
         cout << "\n\n\n\tDo you want to find another book?(y/n)";
         cin >> choice;
     } while (choice == 'y');
+    this->homePage();
 }

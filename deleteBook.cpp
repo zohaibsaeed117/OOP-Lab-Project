@@ -50,7 +50,6 @@ void Librarian::deleteBook()
         cout << "\n\n\n\tDo you want to delete another book?(y/n)";
         cin >> choice;
     } while (choice == 'y');
-    system("Pause");
     cout << "Redirecting to the home page..." << endl;
     this->homePage();
     sleep(3);

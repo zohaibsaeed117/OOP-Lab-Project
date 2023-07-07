@@ -55,7 +55,6 @@ void Librarian::issueBook()
         cout << "\n\n\n\tDo you want to issue book to another student?(y/n)";
         cin >> choice;
     } while (choice == 'y');
-    system("Pause");
     cout << "Redirecting to the Home page...";
     sleep(3);
     this->homePage();
