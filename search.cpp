@@ -18,6 +18,10 @@ int search(string str, string substr)
             {
                 break;
             }
+            else if (j < otherLength)
+            {
+                found = false;
+            }
         }
         else
         {

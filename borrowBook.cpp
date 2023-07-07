@@ -73,7 +73,7 @@ void Student::borrowBook()
         else if (flag == 2)
         {
             char check;
-            cout << "\n\n\n\tDid you mean \"" << checkBook << "\"?(y/n)" << endl;
+            cout << "\n\n\n\tDid you mean \"" << checkBook << "\"?(y/n)";
             cin >> check;
             if (check == 'y')
             {
@@ -112,7 +112,7 @@ void Student::borrowBook()
         {
             cout << "\n\n\n\tBook is not present in the library!" << endl;
         }
-        cout << "Do you want to borrow another book?(y/n)" << endl;
+        cout << "Do you want to borrow another book?(y/n)";
         cin >> choice;
     } while (choice == 'y');
     cout << "Redirecting to the homepage..." << endl;
