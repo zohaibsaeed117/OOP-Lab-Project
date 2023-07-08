@@ -21,6 +21,7 @@ void Student::checkStatus()
              << "\t" << checkStatus << endl;
     }
     status.close();
+    system("Pause");
     cout << "Redirecting to the Home page...";
     sleep(3);
     this->homePage();

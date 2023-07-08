@@ -5,15 +5,15 @@
 using namespace std;
 void Librarian::issueBook()
 {
-    system("cls");
-    char choice;
+    string choice;
     do
     {
+        system("cls");
         string studentName;
         cout << "\n\n\n\tEnter the name of the Student you want to issue a book\t";
         cin.ignore();
         getline(cin, studentName);
-        string fileName=studentName+".txt";
+        string fileName = studentName + ".txt";
         ifstream student(fileName);
         ofstream tempFile("temp.txt");
         if (!student)
@@ -33,7 +33,7 @@ void Librarian::issueBook()
             {
                 if (search(temp, bookName) > -1)
                 {
-                    temp.replace(0,8,"approved ");
+                    temp.replace(0, 8, "approved ");
                     flag = true;
                 }
                 tempFile << temp << endl;
@@ -41,11 +41,11 @@ void Librarian::issueBook()
             student.close();
             tempFile.close();
             remove(fileName.c_str());
-            rename("temp.txt",fileName.c_str());
+            rename("temp.txt", fileName.c_str());
             if (flag)
             {
                 cout << "\n\n\n\tBook"
-                     << "\"" << bookName << "\" for Student \"" << studentName << "\" is approved\n";
+                     << "\"" << bookName << "\" for Student \"" << studentName << "\" is approved!\n";
             }
             else
             {
@@ -54,8 +54,8 @@ void Librarian::issueBook()
         }
         cout << "\n\n\n\tDo you want to issue book to another student?(y/n)";
         cin >> choice;
-    } while (choice == 'y');
+    } while (choice == "y" || choice == "Y");
     cout << "Redirecting to the Home page...";
-    sleep(3);
     this->homePage();
+    sleep(3);
 }

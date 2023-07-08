@@ -7,12 +7,12 @@
 using namespace std;
 void Person::searchBook()
 {
-    char choice;
+    string choice;
     do
     {
         system("cls");
         string bookName;
-        cout << "\n\n\n\tWhat book do you want to search?(y/n)\t";
+        cout << "\n\n\n\tWhat book do you want to search?\t";
         cin.ignore();
         getline(cin, bookName);
         int flag = 0;
@@ -42,7 +42,7 @@ void Person::searchBook()
         else if (flag == 2)
         {
             char check;
-            cout << "Did you mean \"" << checkBook << "\" ?(y/n)";
+            cout << "\n\n\n\tDid you mean \"" << checkBook << "\" ?(y/n)";
             cin >> check;
             if (check == 'y')
             {
@@ -61,6 +61,6 @@ void Person::searchBook()
         }
         cout << "\n\n\n\tDo you want to find another book?(y/n)";
         cin >> choice;
-    } while (choice == 'y');
+    } while (choice == "y"||choice=="Y");
     this->homePage();
 }

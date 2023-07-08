@@ -41,7 +41,7 @@ public:
 class Library
 {
 private:
-    Person *ptr;
+    Person *ptr=NULL;
 
 public:
     int mainMenu();

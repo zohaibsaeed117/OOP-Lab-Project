@@ -1,5 +1,4 @@
 pending	howard dental
-pending	thomas calculus
+approved thomas calculus
 pending	zaibi and cheema
 pending	spider man
-pending	talha great
