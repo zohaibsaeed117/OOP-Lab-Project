@@ -9,7 +9,7 @@ using namespace std;
 void Librarian::deleteBook()
 {
     system("cls");
-    char choice;
+    string choice;
     do
     {
         bool isFound = false;
@@ -49,9 +49,8 @@ void Librarian::deleteBook()
         }
         cout << "\n\n\n\tDo you want to delete another book?(y/n)";
         cin >> choice;
-    } while (choice == 'y');
-    system("Pause");
+    } while (choice == "y"||choice == "Y");
     cout << "Redirecting to the home page..." << endl;
-    this->homePage();
     sleep(3);
+    this->homePage();
 }

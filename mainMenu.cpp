@@ -21,6 +21,10 @@ int Library::mainMenu()
     system("cls");
     if (choice == 1)
     {
+        if(ptr!=NULL)
+        {
+            delete ptr;
+        }
         ptr = new Librarian; // Move user to Librarian Menu
         ptr->menu();
         return 1;
@@ -28,6 +32,10 @@ int Library::mainMenu()
 
     else if (choice == 2)
     {
+        if(ptr!=NULL)
+        {
+            delete ptr;
+        }
         ptr = new Student; // Move user to stumenu Menu
         ptr->menu();
         return 1;
@@ -36,6 +44,7 @@ int Library::mainMenu()
     {
         cout << "\n\n\n\tThankyou for using our Library Managment System!" << endl;
         system("Pause");
+        system("exit");
         return 0; // Exit Menu
     }
     delete ptr;

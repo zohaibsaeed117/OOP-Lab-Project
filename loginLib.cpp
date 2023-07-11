@@ -44,7 +44,7 @@ void Librarian::login()
             char ans;
             cout<<"\n\n\n\tDo you want to try again?(y/n)";
             cin>>ans;
-            if(ans!='y')
+            if(ans!='y'||ans!='Y')
             {
                 menu();
             }

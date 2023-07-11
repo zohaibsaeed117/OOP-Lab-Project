@@ -7,7 +7,7 @@ using namespace std;
 void Librarian::addBook()
 {
     system("cls");
-    char choice;
+    string choice;
     do
     {
         bool flag = true;
@@ -40,9 +40,9 @@ void Librarian::addBook()
                  << "\"" << bookName << "\" is added in the list succesfully" << endl;
             book.close();
         }
-        cout << "\n\n\n\tDo you want to add another book?";
+        cout << "\n\n\n\tDo you want to add another book?(y/n)";
         cin >> choice;
-    } while (choice == 'y');
+    } while (choice == "y"||choice == "Y");
     cout << "Redirecting to the home page..." << endl;
     sleep(3);
     this->homePage();

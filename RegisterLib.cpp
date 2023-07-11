@@ -29,7 +29,6 @@ void Librarian::Register()
 
                 cout << "Warning! User Name is already taken!" << endl;
                 cout << "\n\n\n\t Enter Details Again:" << endl;
-                system("Pause");
                 flag = false;
                 break;
             }
@@ -47,8 +46,8 @@ void Librarian::Register()
          << "\"" << userName << "\""
          << " registerd Successfully" << endl;
     File.close();
-    cout<<"Redirecting to Login Page" << endl;
+    cout<<"Redirecting to Librarian Menu" << endl;
     sleep(3);
     system("cls");
-    this->login();
+    this->menu();
 }
