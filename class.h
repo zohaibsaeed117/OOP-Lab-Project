@@ -45,5 +45,9 @@ private:
 
 public:
     int mainMenu();
+    ~Library()
+    {
+        delete ptr;
+    }
 };
 #endif

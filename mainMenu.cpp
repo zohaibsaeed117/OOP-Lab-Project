@@ -1,8 +1,8 @@
 #include <iostream>
 #include "class.h"
-#include "stdlib.h"
+// #include <stdlib.h>
 using namespace std;
-int Library::mainMenu()
+int Library:: mainMenu()
 {
     system("cls");
     cout << "<----------------------->" << endl;
@@ -17,6 +17,7 @@ int Library::mainMenu()
     cout << "\n\n\n\t3--> EXIT" << endl;
     cout << "\n\n\n\t PLEASE SELECT YOUR OPTION:--> ";
     int choice;
+
     cin >> choice;
     system("cls");
     if (choice == 1)
