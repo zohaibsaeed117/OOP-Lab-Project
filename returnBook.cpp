@@ -16,11 +16,8 @@ void Student::returnBook()
         string status;
         int i = 0;
         cout << "\n\n\n\t--------------------------Borrowed books--------------------------\n";
-        while (!user.eof())
+        while (user>>status&&getline(user,book))
         {
-            user >> status;
-            user.ignore();
-            getline(user, book);
             i++;
             cout << i << "." << book << endl;
         }

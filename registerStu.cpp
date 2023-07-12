@@ -52,5 +52,5 @@ void Student::Register()
     cout<<"Redirecting to Login Page..." << endl;
     sleep(3);
     system("cls");
-    this->login();
+    this->menu();
 }

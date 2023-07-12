@@ -44,7 +44,7 @@ void Librarian::homePage()
         else
         this->homePage();
     }
-    else if(choice==5)
+    else
     {
         cout<<"\n\n\n\tThankyou for using our Library Managment System!"<<endl;//Exit
         system("exit");
